@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>virtio-win</id>
+    <title>VirtIO Drivers and Guest Tools (Install)</title>
+    <version>0.1.285.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>
+    <authors>Red Hat, Google, Virtuozzo, IBM</authors>
+    <projectUrl>https://www.linux-kvm.org/page/WindowsGuestDrivers</projectUrl>
+    <projectSourceUrl>https://github.com/virtio-win/kvm-guest-drivers-windows</projectSourceUrl>
+    <iconUrl>https://repository-images.githubusercontent.com/2524933/e9fdbcaf-0520-4a88-ab45-3f466564ad96</iconUrl>
+    <docsUrl>https://github.com/virtio-win/kvm-guest-drivers-windows/wiki/Driver-installation</docsUrl>
+    <mailingListUrl>https://github.com/virtio-win/kvm-guest-drivers-windows/discussions</mailingListUrl>
+    <bugTrackerUrl>https://github.com/virtio-win/kvm-guest-drivers-windows/issues</bugTrackerUrl>
+    <copyright>Red Hat, Google, Virtuozzo, IBM</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/virtio-win/kvm-guest-drivers-windows/refs/heads/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>ISO VirtIO drivers</tags>
+    <summary>Windows paravirtualized drivers for QEMU\KVM</summary>
+    <description>
+---
+
+### [choco://virtio-win](choco://virtio-win/s=https://nuts.bcurran3.org/nuget/chocolatey/)
+To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts.bcurran3.org/feeds/chocolatey/choco-protocol-support/versions)
+
+---
+
+KVM/QEMU Windows guest drivers, for both paravirtual and emulated hardware.
+    
+
+---
+
+**Want to show appreciation?**
+
+* 🙏 EMAIL  : [bcurran3@bcurran3.org](mailto:bcurran3@bcurran3.org)
+* 🙏 BUYMEACOFFEE: https://buymeacoffee.com/bcurran3
+* 🙏 KO-FI  : https://ko-fi.com/bcurran3
+* 🙏 PATREON: https://www.patreon.com/bcurran3
+* 🙏 PAYPAL : https://www.paypal.me/bcurran3donations
+
+---
+
+
+</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

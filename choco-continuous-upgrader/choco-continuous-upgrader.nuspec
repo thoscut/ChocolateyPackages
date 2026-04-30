@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-continuous-upgrader</id>
+    <version>1.0.2</version>
+    <title>Chocolatey Continuous Upgrader (CCU) (Script)</title>
+    <authors>bcurran3</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</projectUrl>
+    <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/choco-continuous-upgrader_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+---
+
+### [choco://choco-continuous-upgrader](choco://choco-continuous-upgrader)
+To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts.bcurran3.org/feeds/chocolatey/choco-protocol-support/versions)
+
+---
+
+![Screenshot of choco-continuous-upgrader](https://nuts.bcurran3.org/endpoints/images/content/choco-continuous-upgrader_screenshot.png)
+[Click here for secret GeekMode screenshot](choco-continuous-upgrader_screenshot_geekmode)
+
+This package is a pseudo replacement for [choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at) which is a pseudo replacement for [choco-upgrade-all-at-startup](https://chocolatey.org/packages/choco-upgrade-all-at-startup). (Got that? There will be a pop quiz!) **CCU** is a result of my obsessive desire to keep my Chocolatey packages up-to-date.
+
+# DO YOU WANT TO UPGRADE YOUR CHOCOLATEY PACKAGES CONTINUOUSLY THROUGHOUT THE DAY?
+
+# YOU JUST FOUND THE EASIEST WAY!
+	
+# HOW DOES IT WORK?
+
+**CCU** starts a background PowerShell process which continuously checks [FeedBurner](https://feeds.feedburner.com/chocolatey) for recently published Chocolatey packages. When locally installed packages are found in the feed, they are automatically upgraded.
+
+**CCU** defaults to checking every 30 minutes, automatically upgrading packages, and no foreground notifications. These defaults are overridable and configurable; e.g. you could use **CCU** to just notify you of upgrades every hour without automatically installing them.
+
+### HIGHLY RECOMMENDED:
+Install my [choco-toast-notifications.hook](https://community.chocolatey.org/packages/choco-toast-notifications.hook) to enable beautiful foreground toast notifications of package installs, upgrades, and uninstalls. If you plan to use **CCU** only for notifications of upgrades without having them automatically installed, I recommend using [burnttoast-psmodule](https://community.chocolatey.org/packages/burnttoast-psmodule) for those notifications.
+
+### USAGE INSTRUCTIONS:
+**CCU -Start** will start **CCU** with defaults or your preferences if you created a config file.
+**CCU -Stop** to stop **CCU**.
+**CCU -Status** will display **CCU**'s running options and packages that have been upgraded or waiting to be upgraded since last check.
+**CCU -Notify** (assumes -Start) will send foreground notifications of upgrades using either BurntToast or MSG.
+**CCU -NoUpgrades** (assumes -Start) will check for upgrades but not automatically install them.
+**CCU -UpgradeAll** (assumes -Start) runs 'choco upgrade all -y' before continuously checking for upgrades.
+**CCU -CreateConfig** to set your preferences.
+**CCU -CreateTask** to set CCU to run on bootup.
+**CCU -Help** for more info.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/choco-continuous-upgrader/readme.md)**
+
+**If you find choco-continuous-upgrader (CCU) useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+    </description>
+    <summary>choco-continuous-upgrader (CCU) - Upgrades your Chocolatey packages continuously throughout the day.</summary>
+    <releaseNotes>
+### CHANGELOG:
+* 1.0.2 - fixed bug where $env:ChocolateyToolsLocation wasn't defined before use
+* 1.0.1 - Re-worded some status messages and added timestamp to last check. If the event WinRM fails to start for toast notifications MSG will now be used.
+* 1.0.0 - initial release
+
+### ROADMAP
+* Nothing planned.
+* It would be neat to make a tray app that replicates GeekMode...
+    </releaseNotes>
+    <copyright>Copyleft Bill Curran</copyright>
+    <tags>bcurran3 unofficial CCU choco upgrade all cup</tags>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</packageSourceUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

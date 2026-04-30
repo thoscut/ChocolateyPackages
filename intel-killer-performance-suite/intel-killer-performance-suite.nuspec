@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-killer-performance-suite</id>
+    <version>40.26.403.2234</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-killer-performance-suite</packageSourceUrl>
+    <title>Intel® Killer Performance Suite (Install)</title>
+    <authors>Intel Corporation</authors>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/19779</projectUrl>
+    <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/Intel-logo-boxed.png</iconUrl>
+    <copyright>© Intel Corporation</copyright>
+    <licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>BCURRAN3 intel killer network adapter nic driver drivers</tags>
+    <summary>Intel® Killer software and drivers for Windows® 10/11</summary>
+    <description>
+---
+
+### [choco://intel-killer-performance-suite](choco://intel-killer-performance-suite/s=https://nuts.bcurran3.org/nuget/chocolatey/)
+To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts.bcurran3.org/feeds/chocolatey/choco-protocol-support/versions)
+
+
+---
+
+This download installs Wi-Fi, Ethernet drivers and Killer Software for the Intel® Killer™ products.
+ 
+
+---
+
+**Want to show appreciation?**
+
+* 🙏 EMAIL  : [bcurran3@bcurran3.org](mailto:bcurran3@bcurran3.org)
+* 🙏 BMC    : https://buymeacoffee.com/bcurran3
+* 🙏 KO-FI  : https://ko-fi.com/bcurran3
+* 🙏 PATREON: https://www.patreon.com/bcurran3
+* 🙏 PAYPAL : https://www.paypal.me/bcurran3donations
+
+---
+
+</description>
+    <releaseNotes>https://downloadmirror.intel.com/918122/KillerPerformanceSuite_40.26.403.2234.pdf</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,33 @@
+﻿$ErrorActionPreference = 'Continue'
+# choco-toast-notifications.hook v1.1.0 (2023-09-29) Copyleft 2023 by Bill Curran AKA BCURRAN3
+# LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
+# Suggestions? Problems? Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues
+
+$chocolateyAction="UNINSTALLED"
+
+# Create icon if it doesn't exist
+if (!(Test-Path "$env:PUBLIC\Pictures\choco.ico")){
+     [System.Reflection.Assembly]::LoadWithPartialName('System.Drawing')  | Out-Null
+     [System.Drawing.Icon]::ExtractAssociatedIcon("$env:ChocolateyInstall\choco.exe").ToBitmap().Save("$env:PUBLIC\Pictures\choco.ico")
+}
+
+# Check if WinRM is running (required to send Toast systemwide)
+$WinRMStatus=(Get-Service 'WinRM').Status
+
+# Send Toast systemwide if admin
+if (Test-ProcessAdminRights) {
+    # Start WinRM if not Running
+    if ((Get-Service WinRM).Status -eq 'Stopped') {Start-Service 'WinRM' -ErrorAction SilentlyContinue}
+    # Show Toast notification
+    if ((Get-Service WinRM).Status -eq 'Running') {
+		Invoke-Command -ComputerName $(hostname) -ArgumentList $env:chocolateyPackageName,$env:chocolateyPackageTitle,$env:chocolateyPackageVersion,$chocolateyAction -ScriptBlock {param([string]$chocolateyPackageName, [string]$chocolateyPackageTitle, [string]$chocolateyPackageVersion, [string]$chocolateyAction) Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force; New-BurntToastNotification -Text "Chocolatey ($chocolateyPackageName)", "$chocolateyPackageTitle v$chocolateyPackageVersion `n$chocolateyAction." -Button (New-BTButton -Content 'Package Webpage' -Arguments "https://community.chocolatey.org/packages/$chocolateyPackageName") -AppLogo "$env:PUBLIC\Pictures\choco.ico"}
+	} else {
+      Write-Host "** Can't send global choco-toast-notifications because WinRM service is not running." -Foreground Yellow
+	  Invoke-Command -ArgumentList $env:chocolateyPackageName,$env:chocolateyPackageTitle,$env:chocolateyPackageVersion,$chocolateyAction -ScriptBlock {param([string]$chocolateyPackageName, [string]$chocolateyPackageTitle, [string]$chocolateyPackageVersion, [string]$chocolateyAction) Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force; New-BurntToastNotification -Text "Chocolatey ($chocolateyPackageName)", "$chocolateyPackageTitle v$chocolateyPackageVersion `n$chocolateyAction." -Button (New-BTButton -Content 'Package Webpage' -Arguments "https://community.chocolatey.org/packages/$chocolateyPackageName") -AppLogo "$env:PUBLIC\Pictures\choco.ico"}
+	  }
+    # Stop WinRM if it was previously in Stopped state
+    if ($WinRMStatus -eq 'Stopped') {Stop-Service 'WinRM' -ErrorAction SilentlyContinue}
+} else {
+  # Show Toast notification to running user if non-admin
+  Invoke-Command -ArgumentList $env:chocolateyPackageName,$env:chocolateyPackageTitle,$env:chocolateyPackageVersion,$chocolateyAction -ScriptBlock {param([string]$chocolateyPackageName, [string]$chocolateyPackageTitle, [string]$chocolateyPackageVersion, [string]$chocolateyAction) Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force; New-BurntToastNotification -Text "Chocolatey ($chocolateyPackageName)", "$chocolateyPackageTitle v$chocolateyPackageVersion `n$chocolateyAction." -Button (New-BTButton -Content 'Package Webpage' -Arguments "https://community.chocolatey.org/packages/$chocolateyPackageName") -AppLogo "$env:PUBLIC\Pictures\choco.ico"}
+}

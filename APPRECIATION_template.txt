@@ -1,0 +1,20 @@
+CHOCOOLATEY NUSPEC:
+
+**Want to show appreciation?**
+
+* 🙏 EMAIL  : [bcurran3@bcurran3.org](mailto:bcurran3@bcurran3.org)
+* 🙏 BUYMEACOFFEE: https://buymeacoffee.com/bcurran3
+* 🙏 KO-FI  : https://ko-fi.com/bcurran3
+* 🙏 PATREON: https://www.patreon.com/bcurran3
+* 🙏 PAYPAL : https://www.paypal.me/bcurran3donations
+
+
+CHOCOLATEY PACKAGES:
+
+Write-Host "  ** Want to show appreciation?" -Foreground Magenta
+Write-Host "  🙏 EMAIL  : " -Foreground Green -NoNewLine; Write-Host "bcurran3@bcurran3.org" -Foreground White
+Write-Host "  🙏 BUYMEACOFFEE: " -Foreground Green -NoNewLine; Write-Host "https://buymeacoffee.com/bcurran3
+" -Foreground White
+Write-Host "  🙏 KO-FI  : " -Foreground Green -NoNewLine; Write-Host "https://ko-fi.com/bcurran3" -Foreground White
+Write-Host "  🙏 PATREON: " -Foreground Green -NoNewLine; Write-Host "https://www.patreon.com/bcurran3" -Foreground White
+Write-Host "  🙏 PAYPAL : " -Foreground Green -NoNewLine; Write-Host "https://www.paypal.me/bcurran3donations" -Foreground White

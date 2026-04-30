@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>advanced-codecs</id>
+    <title>[DEPRECATED] Shark007's 64bit ADVANCED Codecs (Portable)</title>
+    <version>99.99.99.99</version>
+    <authors>Shark007</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://shark007.net/x64components1.html</projectUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>
+    <tags>deprecated</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/deprecated.png</iconUrl>
+    <summary></summary>
+    <description>
+---
+
+### [choco://advanced-codecs](choco://advanced-codecs/s=https://nuts.bcurran3.org/nuget/chocolatey/)
+To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts.bcurran3.org/feeds/chocolatey/choco-protocol-support/versions)
+
+
+---
+## This package has been deprecated. It has been replaced by [Shark007Codecs](https://nuts.bcurran3.org/feeds/chocolatey/shark007codecs/versions).
+### [choco://shark007codecs](choco://shark007codecs/s=https://nuts.bcurran3.org/nuget/chocolatey/)
+
+![](https://nuts.bcurran3.org/endpoints/images/content/deprecated.png)
+
+
+	</description>
+    <dependencies>
+      <dependency id="shark007codecs" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="\*.nuspec" />
+  </files>
+</package>

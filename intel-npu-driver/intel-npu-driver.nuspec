@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-npu-driver</id>
+    <version>32.0.100.4724</version>
+    <owners>bcurran3</owners>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/794734/intel-npu-driver-windows.html</projectUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-npu-driver</packageSourceUrl>
+    <title>Intel NPU Software &amp; Drivers (Install)</title>
+    <authors>Intel Corporation</authors>
+    <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/Intel-logo-boxed.png</iconUrl>
+    <copyright>© Intel Corporation</copyright>
+    <licenseUrl>https://www.intel.com/content/www/us/en/developer/articles/license/end-user-license-agreement.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://community.intel.com/</mailingListUrl>
+    <tags>bcurran3 intel npu drivers</tags>
+    <summary>Intel® NPU Driver - Windows</summary>
+    <description>
+---
+
+### [choco://intel-npu-driver](choco://intel-npu-driver/s=https://nuts.bcurran3.org/nuget/chocolatey/)
+To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts.bcurran3.org/feeds/chocolatey/choco-protocol-support/versions)
+
+
+---
+
+This download installs Intel® NPU Driver - Windows* xx.x.xxx.xxxx for Intel® Core™ Ultra processors.
+
+Intel ® NPU Driver for Windows* (Intel ® AI Boost) includes support for OpenVino™ 2025.2
+
+---
+
+**Want to show appreciation?**
+
+* 🙏 EMAIL  : [bcurran3@bcurran3.org](mailto:bcurran3@bcurran3.org)
+* 🙏 BMC    : https://buymeacoffee.com/bcurran3
+* 🙏 KO-FI  : https://ko-fi.com/bcurran3
+* 🙏 PATREON: https://www.patreon.com/bcurran3
+* 🙏 PAYPAL : https://www.paypal.me/bcurran3donations
+
+---
+
+</description>
+    <releaseNotes>https://downloadmirror.intel.com/917145/NPU_Win_Release_Notes_v32.0.100.4724.pdf</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

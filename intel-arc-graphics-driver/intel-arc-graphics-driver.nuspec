@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-arc-graphics-driver</id>
+    <version>32.0.101.8735</version>
+    <owners>bcurran3</owners>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/785597</projectUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-arc-graphics-driver</packageSourceUrl>
+    <title>Intel Arc Graphics Drivers</title>
+    <authors>Intel Corporation</authors>
+    <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/Intel-logo-boxed.png</iconUrl>
+    <copyright>© Intel Corporation</copyright>
+    <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://community.intel.com/</mailingListUrl>
+    <tags>bcurran3 intel arc iris xe video driver</tags>
+    <summary>Intel Arc Graphics Driver for Windows 10/11</summary>
+    <description>
+---
+
+### [choco://intel-arc-graphics-driver](choco://intel-arc-graphics-driver/s=https://nuts.bcurran3.org/nuget/chocolatey/)
+To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts.bcurran3.org/feeds/chocolatey/choco-protocol-support/versions)
+
+
+---
+
+This download installs Intel Arc Graphics Driver xx.xx.xx.xx for Intel® Arc™ Graphics family (Codename Alchemist, Battlemage)and Intel® Core™ Ultra processor family (Codename Meteor Lake, Lunar Lake, Arrow Lake-S, Arrow Lake-H)
+
+
+---
+
+** Want to show appreciation?**
+
+* 🙏 EMAIL  : [bcurran3@bcurran3.org](mailto:bcurran3@bcurran3.org)
+* 🙏 BMC    : https://buymeacoffee.com/bcurran3
+* 🙏 KO-FI  : https://ko-fi.com/bcurran3
+* 🙏 PATREON: https://www.patreon.com/bcurran3
+* 🙏 PAYPAL : https://www.paypal.me/bcurran3donations
+
+---
+
+</description>
+    <releaseNotes>https://downloadmirror.intel.com/917974/ReleaseNotes_101.8735.pdf</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

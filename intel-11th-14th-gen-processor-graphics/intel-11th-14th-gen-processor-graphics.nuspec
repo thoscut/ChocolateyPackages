@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-11th-14th-gen-processor-graphics</id>
+    <version>32.0.101.7084</version>
+    <owners>bcurran3</owners>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/864990</projectUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-11th-14th-gen-processor-graphics</packageSourceUrl>
+    <title>Intel 11th – 14th Gen Processor Graphics</title>
+    <authors>Intel Corporation</authors>
+    <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/Intel-logo-boxed.png</iconUrl>
+    <copyright>© Intel Corporation</copyright>
+    <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://community.intel.com/</mailingListUrl>
+    <tags>bcurran3 intel uhd iris xe video driver</tags>
+    <summary>Intel 11th – 14th Gen Processor graphics drivers for Windows 10/11</summary>
+    <description>
+---
+
+### [choco://intel-arc-graphics-driver](choco://intel-11th-14th-gen-processor-graphics/s=https://nuts.bcurran3.org/nuget/chocolatey/)
+To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts.bcurran3.org/feeds/chocolatey/choco-protocol-support/versions)
+
+
+---
+
+This download installs Intel UHD graphics driver xx.xx.xx.xx for Intel UHD Graphics family in Intel 11th - 14th generation CPUs.
+- 11th Gen Intel® Core™ processor family (Codename Tiger Lake, Rocket Lake, Tiger Lake-H)
+- 12th Gen Intel® Core™ processor family (Codename Alder Lake-S, Alder Lake-H, Alder Lake-P, Alder Lake-U, Alder Lake-HX, Alder Lake-N, Twin Lake)
+- 13th Gen Intel® Core™ processor family (Codename Raptor Lake-S, Raptor Lake-HX, Raptor Lake-H, Raptor Lake-P, Raptor Lake-U)
+- 14th Gen Intel® Core™ processor family (Codename Raptor Lake-S Refresh, Raptor Lake-H Refresh, Raptor Lake-U Refresh)
+- Intel® Iris® Xe Dedicated Graphics family (Codename DG1) 
+
+
+---
+
+** Want to show appreciation?**
+
+* 🙏 EMAIL  : [bcurran3@bcurran3.org](mailto:bcurran3@bcurran3.org)
+* 🙏 BUYMEACOFFEE: https://buymeacoffee.com/bcurran3
+* 🙏 KO-FI  : https://ko-fi.com/bcurran3
+* 🙏 PATREON: https://www.patreon.com/bcurran3
+* 🙏 PAYPAL : https://www.paypal.me/bcurran3donations
+
+---
+
+</description>
+    <releaseNotes>https://downloadmirror.intel.com/873460/ReleaseNotes_101.7084.pdf</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

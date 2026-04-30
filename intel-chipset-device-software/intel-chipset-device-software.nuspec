@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-chipset-device-software</id>
+    <version>10.1.20398.8776</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-chipset-device-software</packageSourceUrl>
+    <title>Intel® Chipset INF Utility (Install)</title>
+    <authors>Intel Corporation</authors>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/19347</projectUrl>
+    <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/Intel-logo-boxed.png</iconUrl>
+    <copyright>Intel Corporation</copyright>
+    <licenseUrl>https://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://community.intel.com/</mailingListUrl>
+    <tags>bcurran3 intel chipset 82801 ICH MCH</tags>
+    <summary>Primarily for Intel® Chipset Products, this utility installs the Windows* INF files.</summary>
+    <description>
+---
+
+### [choco://intel-chipset-device-software](choco://intel-chipset-device-software/s=https://nuts.bcurran3.org/nuget/chocolatey/)
+To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts.bcurran3.org/feeds/chocolatey/choco-protocol-support/versions)
+
+---
+
+## About this file/download
+
+The Intel Chipset Device Software installs the Windows* INF files. An INF is a text file that provides the operating system with information about a piece of hardware on the system. In the case of the current Intel Chipset Device Software, that information is primarily the product name for the piece of hardware. This allows the operating system to show the correct name for that piece of hardware in Device Manager.
+
+**Note:** The Intel Chipset Device Software does not install drivers for AGP or USB. Do not download this utility if your device manufacturer is recommending it to correct an "AGP driver," "AGP GART," or "USB driver" issue; it will not correct your issue.
+
+Supported operating systems:
+* Microsoft Windows Server* 2012 R2 x64
+* Microsoft Windows® 10
+* Microsoft Windows 10 x64
+* Microsoft Windows 11* x64
+* Microsoft Windows Server 2016 x64
+* Microsoft Windows Server 2019 x64
+* Microsoft Windows Server 2022 x64
+* Microsoft Windows Server 2025 x64
+
+**About Intel® drivers**
+
+The driver or software for your Intel® component might have been changed or replaced by the computer manufacturer. We recommend you work with your computer manufacturer before installing our driver so you don’t lose features or customizations.
+
+See [list of manufacturers’ Support websites](https://www.intel.com/content/www/us/en/support/system-manufacturers.html).
+
+
+---
+
+** Want to show appreciation?**
+
+* 🙏 EMAIL  : [bcurran3@bcurran3.org](mailto:bcurran3@bcurran3.org)
+* 🙏 BUYMEACOFFEE: https://buymeacoffee.com/bcurran3
+* 🙏 KO-FI  : https://ko-fi.com/bcurran3
+* 🙏 PATREON: https://www.patreon.com/bcurran3
+* 🙏 PAYPAL : https://www.paypal.me/bcurran3donations
+
+---
+
+</description>
+    <releaseNotes>https://downloadmirror.intel.com/30553/eng/10.1.18793.8276_release_notes.pdf</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet4.5" version="4.5.20120822"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
