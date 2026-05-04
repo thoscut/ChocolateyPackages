@@ -1,0 +1,9 @@
+<package>
+  <id>choco-toast-notifications</id>
+  <version>1.3.0</version>
+  <description>This package now includes pre-install notifications to enhance user experience. Updated changelog to reflect new features.</description>
+  <changelog>
+    - Added pre-install notifications
+    - Mentioned pre-upgrade notifications
+  </changelog>
+</package>
